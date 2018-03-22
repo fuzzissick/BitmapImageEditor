@@ -1,0 +1,60 @@
+The new programmer will need to know a few things about my code. First couple of things
+They should know is the functionality of the PixelButton and lastUsedButton
+classes. These classes are place holders for some information that will be helpful
+to pinpoint each JButton used for these functions. For example, lastUsedButton has
+a data member that holds a color it is pertained to. Another thing they need to know
+is that Icon is flipped. For example, the top left corner of a bitmap image
+shows a red pixel there. Well, in my code, that Button and Pixel is located at
+4,4 (if the bitmap was 5x5). They will also need to know to save a bitmap they need
+to pass in the path to where they want to save it. For the GUI, I added arraylists of
+buttonReferences and lastUsed Buttons. This is used to keep track of the information
+in an organized manner. They also should be cautious when changing the formatting of
+the parent JFrame because it could cause visual issues. When saving a file, make sure
+to add bmp to the end of the file, otherwise it won't properly save.
+
+Knowing about the evolution of the code can help the programmer
+understand how I came to my understanding of the code. They can maybe check why I made
+some decisions at the beginning, then changed them as I started going. For example,
+when I was making my advanced options, I just had jcheckboxs that got the information
+using JOptionPanes. This was bad form and looked worse, so I changed it to look
+better for the user who will use my GUI. I also added in a try catch exception
+for when trying to add a color to a button/pixel that didn't. It was cheap code,
+and there are better ways to do it.
+
+Some things I learned along the way was the certain heirarchy required when using swing.
+If you incorrectly use swing objects while creating a GUI, things might not show up,
+you might get errors, or your program might just not work. I also learned that from
+the beginning I should be creating my code to be easily accessible to go back and
+rewrite. Because I have the topLeft Pixel as 4,4(5x5ICON), it caused me to get 
+confused easily not only when working on this project, but the BitmapIcon project
+earlier in the semester. From the beginning, I should have worked harder to make
+the code easier for me the programmer to work with. I payed for it, but made it work.
+Some other things I learned was about how important inheritance can be.
+Being able to inherit JButton into the PixelButton and LastUsedButton classes
+made it easier on my life to work with my GUI overall. I also learned that using swing
+is very easy because all the objects work very well with each other. It is very easy
+to make the GUI work for you. I also learned some cool tricks with the action
+listener and how to make certain buttons/sliders do cool things to my code.
+
+I made some decisions to change my code because it wouldn't have worked otherwise.
+For my Icon class, I had to add in a setPixel method based on a color rather than
+rgb values. I also had to change the createBitmap to have a parameter as a string
+that was the filepath. This filepath is thrown in by my savedialog and opendialog.
+Those JFileChoosers contain a string of the path, and I throw that path into my 
+createBitmap method, which then creates the file based on the path. I had to change
+the getHeight and getWidth methods from private to public because my GUI needed those
+values to work with. On my decisions revolving around my newly written code, I wrote
+it the way I did because I think it would look the best not only in the code
+but in the GUI. Using Grid Layouts for most JPanels, I was able to organize information
+in a formly manner. By using BorderLayout for the overall JFrame, I was able 
+to organize those organized JPanels onto the JFrame. I also decided to add
+in action listeners the way I did because having to use a bunch of if statements to
+check if the action listener pertains to the button/slider clicked. It was easier
+for me and probably the user that way. I also imported a lot of librarys that I did
+not know the functionality of but learned through the internet/playing
+around with. Those libraries were necessessary because they made it easy for me
+the programmer to use and easy for the user of my program. I think its a win/win.
+I also decided to use ArrayLists for some datamembers because it would be
+way easier for me to access those objects if they were organized.
+
+Overall, I am very proud with this project and the way it turned out. 
